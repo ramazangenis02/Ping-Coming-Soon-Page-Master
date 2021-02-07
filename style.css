@@ -1,0 +1,178 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 20px;
+  overflow-x: hidden;
+}
+
+/* Main Styles */
+.container {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+}
+
+.header {
+  z-index: 2;
+}
+.header > img {
+  margin-top: 60px;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.header > h1 {
+  margin-top: 150px;
+  color: hsl(0, 0%, 59%);
+  font-weight: 300;
+  font-size: 43px;
+}
+
+.header > h1 > span {
+  color: hsl(209, 33%, 12%);
+  font-weight: 800;
+}
+
+.header > p {
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.form {
+  display: flex;
+}
+.input-area {
+  display: flex;
+  flex-direction: column;
+}
+#input {
+  margin-right: 20px;
+  border-radius: 50px;
+  width: 400px;
+  padding: 15px;
+  border: none;
+  border: 1px solid hsl(0, 0%, 59%);
+  outline: none;
+}
+
+.form > button {
+  background: hsl(223, 87%, 63%);
+  color: #fff;
+  border-radius: 50px;
+  border: none;
+  padding: 8px 60px;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  outline: none;
+}
+
+.form > button:hover {
+  opacity: 0.6;
+}
+
+#error {
+  position: absolute;
+  margin: 52px 0px 20px 16px;
+  font-size: 14px;
+  color: hsl(354, 100%, 66%);
+  display: none;
+}
+
+section {
+  position: absolute;
+  display: block;
+  margin: 400px auto;
+}
+
+section > img {
+  width: 600px;
+}
+
+footer {
+  position: absolute;
+}
+
+.social-media-icons {
+  display: flex;
+  align-items: flex-end;
+  height: 880px;
+  justify-content: center;
+}
+
+.social-media-icons a {
+  color: hsl(223, 87%, 63%);
+  border-radius: 50%;
+  height: 32px;
+  width: 32px;
+  border: 1px solid hsl(0, 0%, 59%);
+  cursor: pointer;
+  transition: all 0.2s linear;
+  margin: 10px;
+}
+
+.social-media-icons a:hover {
+  border-color: hsl(223, 87%, 63%);
+  background-color: hsl(223, 87%, 63%);
+  color: #fff;
+}
+
+.social-media-icons > a > i {
+  margin-top: 7px;
+  font-size: 15px;
+}
+
+.copyright {
+  font-size: 12px;
+  text-align: center;
+  color: hsl(0, 0%, 59%);
+  margin-top: 15px;
+}
+
+@media screen and (max-width: 670px) {
+  .header > h1 {
+    font-size: 28px;
+  }
+
+  .header > p {
+    font-size: 16px;
+  }
+  .form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .form > input {
+    margin-bottom: 10px;
+  }
+  .form > button {
+    width: 350px;
+    padding: 15px;
+  }
+  #input {
+    margin-right: 0;
+    width: 350px;
+    margin-bottom: 10px;
+  }
+  section img {
+    width: 400px;
+  }
+  .social-media-icons {
+    height: 800px;
+  }
+
+  #error {
+    position: unset;
+    margin: 0 0 10px;
+  }
+}
